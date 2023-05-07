@@ -6,7 +6,6 @@ const port = 5000;
 app.get("/encrypt/:message/:password", (req, res) => {
     const message = req.params.message;
     const password = req.params.password;
-
     const cipherText = PasswordCryptography.EncryptMessage(message, password);
     res.send(cipherText);
 });

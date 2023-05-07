@@ -1,13 +1,147 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("assets/background.jpg");
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 20px;
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  border: 1px solid rgba(255, 255, 255, 0.992);
+  border-radius: 10px;
+  backdrop-filter: blur(10px) brightness(70%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  width: 900px;
+  padding-top: 20px;
 }
+@media only screen and (max-width: 700px) {
+  .container{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .container{
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+  
+
+.header {
+  background-color: rgba(236, 230, 230, 0.291);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  width: fit-content;
+  margin: auto;
+  padding: 0px 30px 0px  30px;
+    
+}
+.text-container{
+    display: block;
+    justify-content: center;
+    padding: 25px 25px 30px;
+    text-align: center;
+} 
+.text-container h2{
+  text-align: left;
+  font-size: 18px;
+}
+  
+.text-container textarea{
+  width: 830px;
+  height: 340px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+  font-size: 18px;
+  border-color: blueviolet;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+textarea:is(:focus, :valid){
+  border-width: 2px;
+  padding: 10px;
+  border-color: blue;
+}
+textarea::-webkit-scrollbar{
+  width: 0px;
+}
+
+@media only screen and (max-width: 700px) {
+  .text-container textarea {
+    width: 530px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .text-container textarea {
+    width: 300px;
+  }
+}
+
+.pw{
+  display: inline-block;
+  background: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+  padding: 10px;
+  width: 250px;
+
+}
+
+.btn-component {
+  display: inline-block;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.btn-component:focus {
+  outline: none;
+}
+
+.btn-component:active {
+  transform: scale(0.98);
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  column-gap: 10em;
+}
+
+@media only screen and (max-width: 400px) {
+  .btn-container {
+    font-size: 0px;
+    column-gap: 1em;
+  }
+}
+
+
